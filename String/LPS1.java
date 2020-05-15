@@ -1,4 +1,4 @@
-class LongestPalindromicSub
+class LPS1
 {
 	
 	public static String expand(String str, int low, int high)
