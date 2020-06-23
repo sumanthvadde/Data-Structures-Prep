@@ -22,18 +22,17 @@ public class SortByFrequency1 {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>(); 
         List<Integer> outputArray = new ArrayList<>(); 
   
-        // Assign elements and their count in the list and map 
+        
         for (int current : array) { 
             int count = map.getOrDefault(current, 0); 
             map.put(current, count + 1); 
             outputArray.add(current); 
         } 
-        Comp comp = new Comp((map); 
+        Comp comp = new Comp(map); 
         
-        // Sort the map using Collections CLass 
+        
         Collections.sort(outputArray, comp); 
   
-        // Final Output 
         for (Integer i : outputArray) { 
             System.out.print(i + " "); 
         }
