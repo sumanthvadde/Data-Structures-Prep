@@ -3,7 +3,9 @@
 	import java.util.*; 
 	  
 	class Segregate01{ 
-	
+	/** 
+	Method for segregation 0 and 1 given input array 
+	*/
 	static void segregate0and1(int arr[]) { 
 	        int type0 = 0; 
 	        int type1 = arr.length - 1; 
