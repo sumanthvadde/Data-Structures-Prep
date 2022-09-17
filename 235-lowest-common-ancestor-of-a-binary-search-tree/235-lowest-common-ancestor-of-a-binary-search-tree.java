@@ -15,16 +15,20 @@ class Solution {
         TreeNode p,
         TreeNode q
     ) {
-        if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(
-            root.right,
-            p,
-            q
-        );
-        if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(
-            root.left,
-            p,
-            q
-        );
-        return root;
+     if (root == null || root == p || root == q) {
+            return root;
+        }
+        int min = Math.min(p.val, q.val);
+        int max = Math.max(p.val, q.val);
+        while (root != null) {
+            if (max < root.val) {
+                root = root.left;
+            } else if (min > root.val) {
+                root = root.right;
+            } else {
+                return root;
+            }
+        }
+        return null;
     }
 }
