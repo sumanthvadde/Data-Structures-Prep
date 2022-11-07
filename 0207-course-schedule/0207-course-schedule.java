@@ -22,7 +22,8 @@ class Solution {
         count++;
         for (int i=0; i<numCourses; i++) {
             if (matrix[course][i] != 0) {
-                if (--indegree[i] == 0)
+                --indegree[i];
+                if (indegree[i] == 0)
                     queue.offer(i);
             }
         }
